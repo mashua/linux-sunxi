@@ -1,3 +1,4 @@
+//arch/arm/include/asm/ftrace.h
 #ifndef _ASM_ARM_FTRACE
 #define _ASM_ARM_FTRACE
 
@@ -45,7 +46,7 @@ void *return_address(unsigned int);
 
 #else
 
-extern inline void *return_address(unsigned int level)
+static inline void *return_address(unsigned int level)
 {
 	return NULL;
 }
